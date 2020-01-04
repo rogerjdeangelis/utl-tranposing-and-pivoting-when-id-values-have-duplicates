@@ -105,10 +105,12 @@ data havCnt / view=havCnt;
   drop on off;
 run;quit;
 
-proc transpose data=havSeq out=havXpo;
+proc transpose data=havCnt out=want;
   by grp;
   id log;
   var hrs;
 run;quit;
+
+
 
 
